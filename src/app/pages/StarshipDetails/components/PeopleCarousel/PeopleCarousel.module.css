@@ -1,0 +1,60 @@
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.personName {
+    text-align: center;
+    margin-top: 1rem;
+    color: #fff;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loading {
+    opacity: 0.5;
+}
+
+.personImage {
+    composes: image from "../common/Carousel.module.css";
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.personItem {
+    composes: carouselItem from "../common/Carousel.module.css";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .personName {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .personName {
+        font-size: 0.9rem;
+    }
+}
+
+/* Any additional specific styles for PeopleCarousel can be added here */

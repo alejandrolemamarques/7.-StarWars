@@ -1,0 +1,148 @@
+.container {
+    padding: 2rem;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.backBtn {
+    background: none;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s, border 0.2s;
+}
+
+.backBtn:hover {
+    background: #222;
+    border-color: #555;
+}
+
+.titleSkeleton {
+    width: 40%;
+    height: 2.5rem;
+    background: #222;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    animation: pulse 1.5s infinite;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.imageSkeleton {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #222;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+.detailsSkeleton {
+    background: rgba(26, 26, 26, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lineSkeleton {
+    height: 1.2rem;
+    background: #222;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite;
+}
+
+.subtitleSkeleton {
+    width: 30%;
+    height: 1.5rem;
+    background: #222;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    animation: pulse 1.5s infinite;
+}
+
+.filmsSection {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.filmsSkeleton {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.filmCardSkeleton {
+    flex: 1;
+    height: 450px;
+    background: #222;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .filmsSkeleton {
+        gap: 0.5rem;
+    }
+
+    .filmCardSkeleton {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.75rem;
+    }
+
+    .filmsSkeleton {
+        display: block;
+    }
+
+    .filmCardSkeleton {
+        height: 350px;
+        margin-bottom: 0.5rem;
+    }
+
+    .filmCardSkeleton:not(:first-child) {
+        display: none;
+    }
+
+    .backBtn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}

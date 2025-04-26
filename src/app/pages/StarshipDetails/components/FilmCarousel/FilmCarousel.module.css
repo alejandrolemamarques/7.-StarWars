@@ -1,0 +1,68 @@
+.image {
+    height: 450px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image {
+        height: 350px;
+    }
+}
+
+.filmImage {
+    composes: image from "../common/Carousel.module.css";
+    min-height: 600px;
+    max-height: 600px;
+    width: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.filmItem {
+    composes: carouselItem from "../common/Carousel.module.css";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.filmTitle {
+    text-align: center;
+    margin-top: 1rem;
+    color: #fff;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .filmImage {
+        min-height: 450px;
+        max-height: 450px;
+    }
+    .filmTitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .filmImage {
+        min-height: 350px;
+        max-height: 350px;
+    }
+    .filmTitle {
+        font-size: 0.9rem;
+    }
+}

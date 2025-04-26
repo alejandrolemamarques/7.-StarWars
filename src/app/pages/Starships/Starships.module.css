@@ -1,0 +1,145 @@
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    margin: 0;
+    color: white;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navigation button {
+    background: none;
+    border: 1px solid #333;
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation button:hover:not(:disabled) {
+    background: #222;
+    border-color: #555;
+}
+
+.navigation button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.navigation span {
+    color: #808080;
+    min-width: 8rem;
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* Make it responsive */
+@media (max-width: 1200px) {
+    .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive adjustments for header and navigation on smaller screens */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column; /* Stack title and navigation */
+        align-items: center; /* Center items */
+        gap: 1rem; /* Add space between title and nav */
+        margin-bottom: 1.5rem;
+    }
+
+    .navigation span {
+        min-width: auto; /* Remove minimum width constraint */
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+
+    .navigation button {
+        width: 2.2rem; /* Slightly smaller buttons */
+        height: 2.2rem;
+        font-size: 1rem;
+    }
+
+    .navigation {
+        gap: 0.75rem; /* Reduce gap between nav items */
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    background: #1a1a1a;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: #2a2a2a;
+    border-color: #505050;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 1.1rem;
+    color: #808080;
+}
+
+.bottomNavigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
